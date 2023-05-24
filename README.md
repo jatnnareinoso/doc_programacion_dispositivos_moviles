@@ -1,5 +1,3 @@
-# doc_programacion_dispositivos_moviles
-
 # Flutter
 Flutter es un framework que permite el desarrollo de un proyecto de programación. Es gratuito y de código abierto, y fue creado por Google en mayo de 2017. Permite crear una aplicación móvil nativa con una sola base de código, por lo que se puede usar un lenguaje de programación y una base de código para crear dos aplicaciones diferentes (para iOS y Android) 
 
