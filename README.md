@@ -1,11 +1,10 @@
-# doc_programacion_dispositivos_moviles
-
-# Xamarin
-
-Xamarin es un framework de desarrollo de aplicaciones móviles multiplataforma. Permite a los desarrolladores crear aplicaciones para iOS, Android y Windows utilizando un lenguaje de programación compartido: C#. Con Xamarin, puedes escribir una única base de código en C# y luego compilarlo para diferentes plataformas móviles, lo que brinda eficiencia y facilita el desarrollo y mantenimiento de aplicaciones multiplataforma.
-- Lenguaje de programación base: Lenguaje C#. Xamarin utiliza un único lenguaje, C#, para crear aplicaciones de todas las plataformas móviles. Xamarin está compilado de forma nativa, lo que lo convierte en una opción para crear aplicaciones de alto rendimiento con aspecto nativo.
-- Enlace a la página oficial de la tecnología: [https://dotnet.microsoft.com/apps/xamarin]
-- Repositorios de ejemplos: [https://github.com/ejemplos_xamarin]
-- Creador: Microsoft
-- Empresa encargada de mantenimiento: Microsoft
-- Fecha de creación: Mayo de 2011
+# Ionic
+ 
+Ionic Framework es un SDK de frontend de código abierto para desarrollar aplicaciones híbridas basado en tecnologías web (HTML, CSS y JS). Es decir, un framework que nos permite desarrollar aplicaciones para iOS nativo, Android y la web, desde una única base de código. Su compatibilidad y, gracias a la implementación de Cordova e Ionic Native, hacen posible trabajar con componentes híbridos. Se integra con los principales frameworks de frontend, como Angular, React y Vue, aunque también se puede usar Vanilla JavaScript. Este framework fue creado en 2013 por Drifty Co. y hasta la llegada de React Native ha sido una de las tecnologías líderes para el desarrollo de aplicaciones móviles híbridas.
+ 
+- Lenguaje de programación base: Se caracteriza por utilizar HTML5 como lenguaje de maquetación para las vistas de las aplicaciones y AngularJS para la programación de controladores y funcionalidades.
+- Enlace a la página oficial de la tecnología: [https://ionic.io/]
+- Repositorios de ejemplos: [https://github.com/ionic-team/ionic-samples]
+- Creador: Drifty Co.
+- Empresa encargada de mantenimiento: Drifty Co.
+- Fecha de creación: Noviembre 2013
