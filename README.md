@@ -147,5 +147,51 @@ Define la estructura básica de un algoritmo en una clase base, delegando la imp
 ### Patrón Visitor:
 Permite separar algoritmos de la estructura de objetos en la que operan. El patrón Visitor permite agregar nuevos comportamientos a una estructura de objetos existente sin modificar dicha estructura. También es útil cuando se tienen operaciones complejas que involucran múltiples tipos de objetos y se desea mantener el código de operación separado de la estructura de objetos.
 
+---
+
+# Patrones de Diseño 
+
+## Hooks 
+
+Los Hooks son una característica introducida en React a partir de la versión 16.8. Permiten utilizar el estado y otras características de React sin necesidad de escribir una clase. Los Hooks son funciones especiales que te permiten "enganchar" o "enlazar" la lógica de estado y efectos secundarios en componentes funcionales de React.
+
+Los Hooks más comunes son useState, useEffect, useContext, y muchos más. Se puede crear nuestros propios Hooks personalizados para reutilizar lógica en diferentes componentes funcionales. Los Hooks tienen una sintaxis más sencilla y concisa en comparación con las clases, y su objetivo principal es mejorar la legibilidad y la reutilización del código.
+
+## HOC 
+
+Los HOC son una técnica utilizada en React que permite la reutilización de la lógica entre componentes. Un HOC es una función que toma un componente y devuelve un nuevo componente con funcionalidad adicional. El HOC envuelve el componente original y puede proporcionar props adicionales, modificar su comportamiento o incluso cambiar su apariencia.
+
+El patrón HOC se basa en el concepto de composición de componentes, donde se crea una nueva componente utilizando una o más componentes existentes. Los HOC son útiles cuando necesitas aplicar una lógica común a varios componentes o cuando deseas compartir funcionalidad entre componentes sin tener que repetir código.
+
+## Diferencias entre HOOKS y HOC
+
+- Los Hooks son una característica integrada en React, mientras que los HOC son una técnica que se basa en las capacidades de composición de React.
+- Los Hooks están diseñados específicamente para componentes funcionales, mientras que los HOC se pueden aplicar tanto a componentes funcionales como a componentes de clase.
+- Los Hooks se utilizan para agregar y administrar el estado y los efectos secundarios en componentes funcionales, mientras que los HOC se utilizan para reutilizar lógica entre componentes y proporcionar funcionalidad adicional.
+- Los Hooks ofrecen una sintaxis más simple y directa, lo que puede mejorar la legibilidad del código, mientras que los HOC pueden tener una sintaxis más compleja debido a la naturaleza de las funciones que los envuelven.
+- Los Hooks pueden mejorar el rendimiento de los componentes funcionales utilizando optimizaciones internas de React, mientras que los HOC no proporcionan beneficios de rendimiento directos.
+
+--- 
+
+## Redux
+
+Redux es una librería para controlar el estado de nuestras aplicaciones web fácilmente, de una forma consistente entre cliente y servidor, testeable y con una gran experiencia de desarrollo.
+
+Redux es una biblioteca de manejo del estado en JavaScript que se utiliza comúnmente en aplicaciones de React. Proporciona un flujo de datos predecible y unidireccional, lo que facilita la administración del estado en aplicaciones complejas.
+En Redux, el estado de la aplicación se almacena en un objeto centralizado llamado "store". El store contiene el estado completo de la aplicación y se actualiza mediante el despacho de acciones. Una acción es un objeto plano que describe un evento o un cambio en la aplicación. Las acciones se despachan utilizando la función "dispatch".
+
+Para actualizar el estado en Redux, se utiliza un concepto llamado "reducer". Un reducer es una función pura que especifica cómo se debe actualizar el estado en respuesta a una acción. Recibe el estado actual y la acción despachada como argumentos, y devuelve un nuevo estado actualizado.
+
+## Context 
+
+El Context en React es una característica que permite pasar datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel. Proporciona una forma de compartir datos entre componentes que se encuentran en diferentes niveles de la jerarquía sin necesidad de pasar props a través de componentes intermedios.
+
+El Context consta de dos partes principales: el proveedor (Provider) y el consumidor (Consumer):
+- El proveedor (Provider) es un componente de React que envuelve un árbol de componentes y proporciona los datos que se desean compartir. Se crea un Context y se le asigna un valor utilizando el componente Provider. El valor puede ser cualquier tipo de dato, como un objeto, una cadena, un número, etc.
+- El consumidor (Consumer) es un componente de React que se utiliza para acceder a los datos proporcionados por el proveedor en cualquier parte del árbol de componentes. El componente Consumer se coloca dentro de la renderización de un componente y recibe una función como su único hijo. Esta función recibe el valor del contexto como argumento y se utiliza para acceder a los datos compartidos.
+
+
+
+
 
 
