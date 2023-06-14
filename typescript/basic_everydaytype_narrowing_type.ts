@@ -329,5 +329,190 @@ function padLeft(padding: number | string, input: string) {
 console.log(padLeft(2, "HOLA"));
 
 ------------------------------------------------------------------
-  
+
 /* Typeof */
+
+ 
+function printAll(strs: string | string[] | null) {
+  if (typeof strs === "object") {
+    for (const s of strs) {
+      console.log(s);
+    }
+  } else if (typeof strs === "string") {
+    console.log(strs);
+  } else {
+    // do nothing
+  }
+}
+
+
+/* Debemos agregar en la condicional la verificación de si strs es null.   */
+
+
+function printAll(strs: string | string[] | null) {
+  if (typeof strs === "object" && strs !== null) {
+    for (const s of strs ) {
+      console.log(s);
+    }
+  } else if (typeof strs === "string") {
+    console.log(strs);
+  } else {
+    // do nothing
+  }
+}
+
+
+------------------------------------------------------------------
+ 
+/* Estrechamiento de veracidad */
+
+function printAll(strs: string | string[] | null) {
+  if (strs && typeof strs === "object") {
+    for (const s of strs) {
+      console.log(s);
+    }
+  } else if (typeof strs === "string") {
+    console.log(strs);
+  }
+}
+
+
+------------------------------------------------------------------
+ 
+/* Reducción de la igualdad */
+function example(x: string | number, y: string | boolean) {
+  if (x === y) {
+    // We can now call any 'string' method on 'x' or 'y'.
+    x.toUpperCase();
+          
+
+    y.toLowerCase();
+          
+  } else {
+    console.log(x);
+              
+    console.log(y);
+          
+  }
+}
+
+example("Type", "Script");
+
+
+------------------------------------------------------------------
+ 
+/* Estrechamiento del operador in */
+
+type Fish = { swim: () => void };
+type Bird = { fly: () => void };
+type Human = { swim?: () => void; fly?: () => void };
+ 
+function move(animal: Fish | Bird | Human) {
+  if ("swim" in animal) {
+    animal;
+
+  } else {
+    animal;
+  }
+}
+
+
+------------------------------------------------------------------
+
+/* Estrechameinto instanceof  */
+
+function logValue(x: Date | string) {
+  if (x instanceof Date) {
+    console.log(x.toUTCString());
+               
+(parameter) x: Date
+  } else {
+    console.log(x.toUpperCase());
+               
+(parameter) x: string
+  }
+}
+
+------------------------------------------------------------------
+ 
+/* Tareas  */
+
+let x = Math.random() < 0.5 ? 10 : "hello world!";
+   
+x = 1;
+ 
+console.log(x);
+           
+x = true;
+.
+ 
+console.log(x);
+
+
+/* Esto da error porque se ha declarado la variable x tipo string/number, y no boolean. */
+
+let x = Math.random() < 0.5 ? 10 : "hello world!";
+  
+x = 1;
+ 
+console.log(x);
+           
+x = "goodbye!";
+ 
+console.log(x);
+
+
+------------------------------------------------------------------
+ 
+/* Análisis de flujo de control */
+
+function example() {
+  let x: string | number | boolean;
+ 
+  x = Math.random() < 0.5;
+ 
+  console.log(x);
+             
+  if (Math.random() < 0.5) {
+    x = "hello";
+    console.log(x);
+
+  } else {
+    x = 100;
+    console.log(x);
+               
+  }
+ 
+  return x;
+        
+}
+
+
+------------------------------------------------------------------
+
+/* Uso de predicados de tipo */
+
+function isFish(pet: Fish | Bird): pet is Fish {
+  return (pet as Fish).swim !== undefined;
+}
+
+ 
+------------------------------------------------------------------
+
+/* Comprobación de exhaustividad */
+
+type Shape = Circle | Square;
+ 
+function getArea(shape: Shape) {
+  switch (shape.kind) {
+    case "circle":
+      return Math.PI * shape.radius ** 2;
+    case "square":
+      return shape.sideLength ** 2;
+    default:
+      const _exhaustiveCheck: never = shape;
+      return _exhaustiveCheck;
+  }
+}
+
+/* Esto da error porque no se han manejado todos los casos posibles, como es el caso de exhaustiveChek, donde el tipo “any” no se le puede asginar a un tipo “never”. */
