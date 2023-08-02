@@ -13,3 +13,5 @@ Atomic Design es una metodología para crear sistemas de diseño que se centra e
 - Páginas:  Las páginas son instancias específicas de plantillas con contenido real, representando lo que los usuarios verán en realidad. Permiten probar la eficacia del sistema de diseño y las variaciones en el contexto.
 
 Los beneficios de Atomic Design incluyen la creación de sistemas de diseño consistentes y escalables, la promoción de la colaboración y la provisión de una metodología clara para el diseño. Alienta a los diseñadores a comenzar con componentes más pequeños y reutilizables, construyendo interfaces completas a partir de ellos.
+
+La metodología Atomic Design proporciona un enfoque sistemático para crear sistemas de diseño, facilitando que clientes y equipos comprendan el proceso de diseño. Cambia el enfoque de diseñar páginas individuales a construir componentes interconectados que se pueden utilizar en varias interfaces.
